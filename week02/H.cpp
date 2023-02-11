@@ -11,7 +11,10 @@ int main(){
             b=1;
         }
     }
-    if (b==0){
+    if ((a==1) or (a==0)){
+        cout<<"NO"<<endl;
+    }
+    else if (b==0){
         cout<<"YES"<<endl;
     }
     else {
