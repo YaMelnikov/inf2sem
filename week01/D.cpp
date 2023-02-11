@@ -16,6 +16,6 @@ int main(){
         a=b;
         b=c;
     }
-    cout<<a;
+    cout<<a<<endl;
     return(0);
 }

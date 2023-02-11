@@ -17,6 +17,6 @@ int main(){
         a=b;
         b=c;
     }
-    cout<<d/a;
+    cout<<d/a<<endl;
     return(0);
 }

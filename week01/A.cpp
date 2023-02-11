@@ -9,5 +9,6 @@ int main(){
     if ((a>0) & (b>0)){
     c=sqrt(a*a+b*b);
     }
-    cout<<c;
+    cout<<floor(c)<<endl;
+    return 0;
 }
