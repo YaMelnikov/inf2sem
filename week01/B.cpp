@@ -11,7 +11,7 @@ int main(){
     cin>>c;
     d=(b*b-4*a*c);
     if (d==0){
-    cout<<(-1)*b/(2*a);
+    cout<<(-1)*b/(2*a)<<endl;
     }
     else if (d>0){
         e=(-b-sqrt(d))/(2*a);
