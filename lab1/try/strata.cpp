@@ -32,7 +32,7 @@ void search(int* array, int size, int elem){
 int main(){
     long long time1 = 0;
     unsigned seed = 1001;
-    int s_count = 500;
+    int c = 500;
     for (int i = 1000; i<1010000; i += 10000){
         time1 = 0;
         int* a = new int[i];
@@ -42,7 +42,7 @@ int main(){
         std::default_random_engine rng(seed);
         std::uniform_int_distribution<unsigned> dstr(0, i);
 
-        for(int j = 0; j < s_count; ++j){
+        for(int j = 0; j < c; ++j){
             auto begin = std::chrono::steady_clock::now();
             search(a, i, dstr(rng)+0.5); 
             auto end = std::chrono::steady_clock::now();
@@ -51,7 +51,7 @@ int main(){
             time1 += time_span.count();
             }
 
-        record(time1/s_count, i);
+        record(time1/c, i);
         delete [] a;
     }
 
