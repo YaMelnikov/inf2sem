@@ -3,7 +3,7 @@
 using namespace std;
 
 #ifndef N
-#define N 2
+#define N 3
 #endif
 
 int trace(int (&array)[N*N]){
