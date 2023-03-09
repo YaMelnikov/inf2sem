@@ -13,26 +13,20 @@ void swap(int& a,int& b){
     a=b-a;}
 }
 
-void pac(int (&a)[], int n, int h) {
-    if (2*n + 1 <= h and a[n] < a[2*n + 1]) {
-        swap(a[n], a[2*n + 1]);
-    }
-    if (2*n + 2 <= h and a[n] < a[2*n + 2]) {
-        swap(a[n], a[2*n + 2]);
+void cheops_sort(int (&a)[N], int n) {
+    if (n==0)
+    return;
+    else {
+        for (int i=n;i>=0;i--){
+            if ((2*i+1<=n) and (a[2*i+1]>a[i]))
+                swap(a[2*i+1],a[i]);
+            if ((2*i+2<=n) and (a[2*i+2]>a[i]))
+                swap(a[2*i+2],a[i]);
+        }
+        swap(a[n],a[0]);
+        cheops_sort(a,n-1);
     }
 }
-
-void cheops_sort(int (&a)[N], int n, int size) {
-    if (n == 0) {
-        return;
-    }
-    for (int i = n; i >= 0; i--) {
-        pac(a, i, n);
-    }
-    swap(a[0], a[n]);
-    cheops_sort(a, n - 1, size);
-}
-
 void print_array(int (&array)[N]){
     for (int i=0; i<N;i++)
         cout<<array[i]<<' ';
@@ -43,6 +37,6 @@ int main() {
     for (int i = 0; i < N; i++) {
         cin >> a[i];
     }
-    cheops_sort(a, N - 1, N);
+    cheops_sort(a, N - 1);
     print_array(a);
 }
