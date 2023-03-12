@@ -6,12 +6,6 @@ using namespace std;
 #define N 5
 #endif
 
-void swap(int& a,int& b){
-    if (a!=b){
-    a-=b;
-    b+=a;
-    a=b-a;}
-}
 void gnome_sort(int (&a)[N]){
     for (int i=0;i<N;i++)
         for (int j=0;j<N-1;j++)

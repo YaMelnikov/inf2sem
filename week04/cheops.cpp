@@ -6,13 +6,6 @@ using namespace std;
 #define N 5
 #endif
 
-void swap(int& a,int& b){
-    if (a!=b){
-    a-=b;
-    b+=a;
-    a=b-a;}
-}
-
 void cheops_sort(int (&a)[N], int n) {
     if (n==0)
     return;
