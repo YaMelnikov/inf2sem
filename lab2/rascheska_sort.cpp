@@ -55,16 +55,21 @@ void make_step(int arr[], int step, int n){
 
 void rascheska(int arr[], int n){
     int step=n/2;
-    while (step>0){
+    while (step>1){
         make_step(arr, step, n);
         step/=2;
+    }
+    int sbs=-1;
+    while (sbs!=counter_of_swaps){
+        sbs=counter_of_swaps;
+        make_step(arr,1,n);
     }
 }
 
 int main(){
     int timer;
-    int c=500;
-    for(int n=1000;n<100001;n+=1000){
+    int c=50;
+    for(int n=1000;n<25001;n+=1000){
     for(long long int j = 0; j < c; ++j){
         int arr[n];
         timer=0;

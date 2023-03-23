@@ -4,7 +4,6 @@ import numpy as npy
 x = []
 y = []
 filename=input()
-title=input()
 f=open(filename, 'r')
 st = f.readline()
 while st:
@@ -18,6 +17,5 @@ fig, ax = plt.subplots()
 
 ax.scatter(x, y, 5, 'b')
 
-plt.title(title)
 plt.grid(visible=True)
 plt.show()
